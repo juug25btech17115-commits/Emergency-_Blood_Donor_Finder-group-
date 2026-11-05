@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Blood Donor Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>🩸 Emergency Blood Donor Finder</h1>
+    <p>Donate Blood, Save Lives</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#register">Become a Donor</a>
+    <a href="#search">Find a Donor</a>
+</nav>
+
+<section id="home" class="hero">
+    <h2>Every Drop Counts!</h2>
+    <p>Find blood donors quickly during emergencies.</p>
+    <a href="#register" class="btn">Register as Donor</a>
+</section>
+
+<section id="register" class="container">
+    <h2>Donor Registration</h2>
+
+    <form id="donorForm">
+
+        <input type="text" id="name"
+            placeholder="Enter your full name" required>
+
+        <input type="tel" id="phone"
+            placeholder="Enter phone number"
+            pattern="[0-9]{10}" required>
+
+        <select id="bloodGroup" required>
+            <option value="">Select Blood Group</option>
+            <option>A+</option>
+            <option>A-</option>
+            <option>B+</option>
+            <option>B-</option>
+            <option>O+</option>
+            <option>O-</option>
+            <option>AB+</option>
+            <option>AB-</option>
+        </select>
+
+        <input type="text" id="city"
+            placeholder="Enter your city" required>
+
+        <input type="text" id="availability"
+            placeholder="Availability (e.g. Available)" required>
+
+        <label class="consent">
+            <input type="checkbox" id="consent" required>
+            I agree to share my details with people searching
+            for blood donors.
+        </label>
+
+        <button type="submit">Register Now</button>
+
+    </form>
+
+    <p id="registerMessage"></p>
+</section>
+
+<section id="search" class="container">
+    <h2>Find Blood Donors</h2>
+
+    <select id="searchBlood">
+        <option value="">Select Required Blood Group</option>
+        <option>A+</option>
+        <option>A-</option>
+        <option>B+</option>
+        <option>B-</option>
+        <option>O+</option>
+        <option>O-</option>
+        <option>AB+</option>
+        <option>AB-</option>
+    </select>
+
+    <input type="text" id="searchCity"
+        placeholder="Enter city">
+
+    <button id="searchButton">Search Donors</button>
+
+    <div id="results"></div>
+</section>
+
+<footer>
+    <p>Emergency Blood Donor Finder | Save Lives, Donate Blood</p>
+</footer>
+
+<script type="module" src="script.js"></script>
+
+</body>
+</html>
